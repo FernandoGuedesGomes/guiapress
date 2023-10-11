@@ -32,14 +32,19 @@
                                 <%= article.category.title %>
                             </td>
                             <td>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2px; ">
+                                    <a href="/admin/articles/edit/<%= article.id%>"><button
+                                            class="btn btn-warning">Editar</button></a>
 
-                            <form method="post" action="/articles/delete" style="display: inline;"
-                                onsubmit="confirmarDelecao(event, this)">
-                                <input type="hidden" name="id" value="<%= article.id %>">
-                                <button class="btn btn-danger">Deletar</button>
-                            </form>
+                                    <form method="post" action="/articles/delete"
+                                        onsubmit="confirmarDelecao(event, this)">
+                                        <input type="hidden" name="id" value="<%= article.id %>">
+                                        <button class="btn btn-danger">Deletar</button>
+                                    </form>
 
-                        </td>
+                                </div>
+
+                            </td>
 
 
                         </tr>
