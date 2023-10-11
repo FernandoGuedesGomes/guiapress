@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "init-db": "node ./infra/sequelize/database-init.js",
     "start": "node ./index.js",
-    "dev": "nodemon index.js --ignore ./data/"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
